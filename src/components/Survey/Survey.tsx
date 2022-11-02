@@ -27,6 +27,7 @@ const Survey = () => {
     const [modalTitle, setModalTitle] = useState<string>("");
     const [error, setError] = useState<string>("");
     const [finishSurvey, setFinishSurvey] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(false);
 
     const { question, fieldName, validationSchema, questions } =
         useQuestion(questionIndex);
@@ -236,7 +237,7 @@ const Survey = () => {
                                 </Fragment>
                             ))}
                         <ErrorMsg>{errors[fieldName]?.message}</ErrorMsg>
-                        <div
+                        {!loading ? <div
                             style={{
                                 display: "flex",
                                 justifyContent: "space-between",
@@ -244,7 +245,7 @@ const Survey = () => {
                         >
                             {questionIndex !== 0 && (
                                 <SButton
-                                    style={{ backgroundColor: "#ffc827" }}
+                                    style={{backgroundColor: "#ffc827"}}
                                     onClick={onPrev}
                                 >
                                     Prev
@@ -257,7 +258,7 @@ const Survey = () => {
                                         : "Submit"}
                                 </SButton>
                             )}
-                        </div>
+                        </div> : <h3 style={{textAlign: "center"}}>Loading...</h3>}
                     </form>
                 </Wrapper>
             )}

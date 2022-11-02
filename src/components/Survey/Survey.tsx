@@ -100,7 +100,7 @@ const Survey = () => {
                 });
                 setQuestionIndex(qIndex);
             } else {
-                localStorage.setItem("survey", JSON.stringify({}));
+                !finishSurvey && localStorage.setItem("survey", JSON.stringify({}));
             }
         } else if (confirmSurvey === "rejected") {
             localStorage.removeItem("survey");

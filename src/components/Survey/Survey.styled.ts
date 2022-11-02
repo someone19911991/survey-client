@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     padding: 10px;
     background-color: var(--blue);
     display: flex;
-    justify-content: center;
+    padding: 30px;
     align-items: center;
     flex-direction: column;
 `;

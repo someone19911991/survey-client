@@ -2,11 +2,7 @@ import React from "react";
 import Survey from "./components/Survey/Survey";
 
 const App = () => {
-    return (
-        <div>
-            <Survey />
-        </div>
-    );
+    return <Survey />;
 };
 
 export default App;

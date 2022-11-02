@@ -104,7 +104,7 @@ const Survey = () => {
         } else if (confirmSurvey === "rejected") {
             localStorage.removeItem("survey");
         }
-    }, [confirmSurvey]);
+    }, [confirmSurvey, setValue]);
 
     useEffect(() => {
         const { _modalTitle, openModal } = getModalTitle();

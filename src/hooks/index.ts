@@ -7,7 +7,7 @@ export const useQuestion = (questionIndex: number) => {
     let validationSchema: any;
     if (!fieldName && question.multiple) {
         const rulesToAdd: { [key: string]: any } = {};
-        question.multiple.map((q) => {
+        question.multiple.forEach((q) => {
             rulesToAdd[q.fieldName] = q.rules;
         });
         validationSchema = yup.object().shape({ ...rulesToAdd });

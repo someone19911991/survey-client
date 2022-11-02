@@ -1,4 +1,4 @@
-import React, {forwardRef, useEffect, useState} from "react";
+import React, {forwardRef} from "react";
 import { InputWrapper, SInput, SLabel } from "./Input.styled";
 
 interface IInputProps {

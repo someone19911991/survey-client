@@ -115,7 +115,7 @@ const Survey = () => {
     const onFinishSurvey = async () => {
         try {
             await axios.post(
-                "http://localhost:5000/api/survey",
+                "https://survey-test-task.herokuapp.com/api/survey",
                 answeredQuestions
             );
             setModalOpen(false);

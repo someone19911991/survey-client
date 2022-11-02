@@ -64,4 +64,9 @@ export const ErrorWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0
-`
+`;
+
+export const Form = styled.form`
+    padding: 10px;
+    width: 100%;
+`;

@@ -10,8 +10,8 @@ export const SSelect = styled.select`
 `;
 
 export const SelectWrapper = styled.div`
-    width: 50%;
-    min-width: 400px;
+    width: 100%;
+    // min-width: 300px;
     max-width: 800px;
     margin: 20px 0;
 `;

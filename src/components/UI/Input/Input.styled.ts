@@ -24,8 +24,8 @@ export const SLabel = styled.label`
 `
 
 export const InputWrapper = styled.div`
-    width: 50%;
-    min-width: 400px;
+    width: 100%;
+    // min-width: 300px;
     max-width: 800px;
     margin: 20px 0;
 `;

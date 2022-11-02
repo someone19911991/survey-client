@@ -12,7 +12,8 @@ import {
     ErrorMsg,
     Error,
     ErrCloseBtn,
-    ErrorWrapper
+    ErrorWrapper,
+    Form
 } from "./Survey.styled";
 import Modal from "../UI/Modal/Modal";
 import { addUpdateQuestion, getLSQuestions, getModalTitle } from "../../utils";
@@ -187,7 +188,7 @@ const Survey = () => {
                         Question {questionIndex + 1}/{questions.length}
                     </h1>
                     <QuestionTitle>{question.question}</QuestionTitle>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <Form style={{padding: '10px'}} onSubmit={handleSubmit(onSubmit)}>
                         {question.type === QuestionTypes.textInput && (
                             <Input type="text" {...register(fieldName)} />
                         )}
@@ -262,7 +263,7 @@ const Survey = () => {
                                 </SButton>
                             )}
                         </div>
-                    </form>
+                    </Form>
                 </Wrapper>
             )}
         </>

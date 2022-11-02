@@ -115,6 +115,7 @@ const Survey = () => {
 
     const onFinishSurvey = async () => {
         try {
+            setLoading(true);
             await axios.post(
                 "https://survey-test-task.herokuapp.com/api/survey",
                 answeredQuestions
@@ -123,6 +124,7 @@ const Survey = () => {
             setConfirmSurvey("confirmed");
             setAnsweredQuestions({});
             localStorage.removeItem("survey");
+            setLoading(false);
         } catch (err) {
             setModalOpen(false);
             const error = err as ErrorType;

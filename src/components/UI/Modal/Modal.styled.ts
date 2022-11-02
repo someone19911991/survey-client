@@ -11,7 +11,6 @@ export const ModalWrapper = styled.div`
     justify-content: center;
     align-items: center;
     max-height: 100vh;
-    overflow-y: scroll;
 `;
 
 export const ModalContent = styled.div`
@@ -20,4 +19,6 @@ export const ModalContent = styled.div`
     min-width: 300px;
     background-color: #fff;
     padding: 20px;
+    max-height: 90%;
+    overflow-y: scroll;
 `

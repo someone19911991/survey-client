@@ -99,7 +99,13 @@ const Survey = () => {
                 answeredQuestionsEntries.forEach((item) => {
                     setValue(item[0], item[1]);
                 });
-                setQuestionIndex(qIndex);
+                if(qIndex === 8){
+                    setFinishSurvey(true);
+                    setModalTitle("Are you sure you want to commit your answers?");
+                    setModalOpen(true);
+                }else{
+                    setQuestionIndex(qIndex);
+                }
             } else {
                 !finishSurvey && localStorage.setItem("survey", JSON.stringify({}));
             }

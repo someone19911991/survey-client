@@ -170,6 +170,7 @@ const Survey = () => {
                 )}
             {modalOpen && finishSurvey  && (
                 <Modal
+                    loading={loading}
                     modalTitle={modalTitle}
                     onCancel={() => {
                         setModalOpen(false);
@@ -239,7 +240,7 @@ const Survey = () => {
                                 </Fragment>
                             ))}
                         <ErrorMsg>{errors[fieldName]?.message}</ErrorMsg>
-                        {!loading ? <div
+                        <div
                             style={{
                                 display: "flex",
                                 justifyContent: "space-between",
@@ -260,7 +261,7 @@ const Survey = () => {
                                         : "Submit"}
                                 </SButton>
                             )}
-                        </div> : <h3 style={{textAlign: "center"}}>Loading...</h3>}
+                        </div>
                     </form>
                 </Wrapper>
             )}
